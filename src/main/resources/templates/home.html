@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" th:replace="~{base::parent(~{::#content},~{::title},~{::script})}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
-    <link rel="stylesheet" data-th-href="@{'/css/output.css'}" />
+    <title>Home Page</title>
 </head>
 <body>
-       <div class="container">
-          <h1 class="text-4xl"data-th-text="${name}">Welcome to Home Page </h1>
-          <p>Role: <span data-th-text="${Role}">abc</span></p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo omnis fuga ea atque impedit, earum quasi iste nihil modi, dolorem nesciunt, voluptatem autem culpa ipsa? Dolore maxime aspernatur eveniet in.</p>
-       </div>
+    <section id="content">
+       <h1>Welcome to Home Page</h1>
 
-       <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    </section>
+    <script>
+        console.log("Home Page")
+    </script>
 </body>
 </html>
