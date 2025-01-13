@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-th-replace="${title}">Base Page</title>
-    <link rel="stylesheet" data-th-href="@{'/css/output.css'}" />
+    
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" data-th-href="@{'/css/output.css'}" />
 </head>
-<body class="dark:bg-gray-900  dark:text-white"> 
+<body class="dark:bg-gray-900 bg-gray-300 dark:text-white"> 
       <h1>Base Page Content</h1>
       <!-- comman header   -->
-         <div data-th-replace="navbar::navbar"></div>
+         <div data-th-replace="~{navbar::navbar}"></div>
 
       <!--  main content -->
         <div>
             <section data-th-replace="${content}"></section>
         </div>
-        <section data-th-replace="${content}"></section>
      <!-- comman footer-->
-        <footer class="p-4">Footer: Hello Vishnukanth</footer>
+        <!-- <footer class="p-4">Footer: Hello Vishnukanth</footer> -->
 
       <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
       <script data-th-src="@{'/js/script.js'}"></script>
