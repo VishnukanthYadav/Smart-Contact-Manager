@@ -37,6 +37,11 @@ public class PageController {
 		return "home";
 	}
 
+	@GetMapping("/")
+	public String index(){
+		return "redirect:/home";
+	}
+
     @RequestMapping("/about")
 	public String aboutPage(){
 		System.out.println("About Page");
